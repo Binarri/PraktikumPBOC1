@@ -5,9 +5,9 @@
 */
 public class Titik {
     /*************ATRIBUT********************/
-    double absis;
-    double ordinat;
-    static int counterTitik = 0;
+    private double absis;
+    private double ordinat;
+    private static int counterTitik = 0;
 
     /***************METHOD******************/
     //konstruksi untuk membuat titik (0,0)
@@ -18,49 +18,49 @@ public class Titik {
     // }
 
     //konstruktor untuk membuat dengan nilai absis dan ordinat tertentu
-    Titik(double absis, double ordinat){
+    public Titik(double absis, double ordinat){
         this.absis = absis;
         this.ordinat = ordinat;
         counterTitik++;
     }
 
-    Titik(){
+    public Titik(){
         this(0,0);
     }
 
     //mengembalikan nilai counterTitik
-    static int getCounterTitik(){
+    public static int getCounterTitik(){
         return counterTitik;
     }
 
     //mengembalikan nilai absis
-    double getAbsis(){
+    public double getAbsis(){
         return absis;
     }
 
     //mengembalikan nilai ordinat
-    double getOrdinat(){
+    public double getOrdinat(){
         return ordinat;
     }
 
     //mengeset absis titik dengan nilai baru x
-    void setAbsis(double x){
+    public void setAbsis(double x){
         absis = x;
     }
 
     //mengeset ordinat titik dengan nilai baru y
-    void setOrdinat(double y){
+    public void setOrdinat(double y){
         ordinat = y;
     }
 
     //menggeser nilai absis dan ordinat titik masing-masing sejauh x dan y
-    void geser(double x, double y){
+    public void geser(double x, double y){
         absis = absis + x;
         ordinat = ordinat + y;
     }
 
     //mencetak koordinat titik
-    void printTitik(){
+    public void printTitik(){
         System.out.println("Titik (" + absis + "," + ordinat + ")");
     }
 
@@ -68,7 +68,7 @@ public class Titik {
     //     System.out.println(this.counterTitik);
     // }
 
-    int getKuadran(){
+    public int getKuadran(){
         if (absis > 0 && ordinat >0){
             return 1;
         } else if (absis <0 && ordinat >0){
@@ -82,30 +82,30 @@ public class Titik {
         }
     }
     
-    double getJarakPusat(){
+    public double getJarakPusat(){
         return Math.sqrt((absis*absis)+(ordinat*ordinat));
     }
 
-    double getJarak(Titik T){
+    public double getJarak(Titik T){
         return Math.sqrt(((absis- T.getAbsis())*(absis- T.getAbsis()))+((ordinat-T.getOrdinat())*(ordinat-T.getOrdinat())));
     }
 
-    void refleksiX(){
+    public void refleksiX(){
         ordinat = -ordinat;
     }
 
-    void refleksiY(){
+    public void refleksiY(){
         absis = -absis;
     }
 
-    Titik getRefleksiX(){
+    public Titik getRefleksiX(){
         Titik T2 = new Titik();
         T2.setAbsis(absis);
         T2.setOrdinat(ordinat * -1);
         return T2;
     }
 
-    Titik getRefleksiY(){
+    public Titik getRefleksiY(){
         Titik T2 = new Titik();
         T2.setAbsis(absis * -1);
         T2.setOrdinat(ordinat);
