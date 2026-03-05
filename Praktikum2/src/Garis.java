@@ -75,8 +75,8 @@ public class Garis {
 
     //menampilkan ke layar titik awal dan titik akhir
     public void printGaris(){
-    System.out.println("Titik awal garis: (" + titikAwal.getAbsis() + "," + titikAwal.getOrdinat() + ")");
-    System.out.println("Titik akhir garis: (" + titikAkhir.getAbsis() + "," + titikAkhir.getOrdinat() + ")");
+        System.out.println("Titik awal garis: (" + titikAwal.getAbsis() + "," + titikAwal.getOrdinat() + ")");
+        System.out.println("Titik akhir garis: (" + titikAkhir.getAbsis() + "," + titikAkhir.getOrdinat() + ")");
     }
 
     //menampilkan persamaan garis dalam bentuk string y=mx+c
