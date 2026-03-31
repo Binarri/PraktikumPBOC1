@@ -8,13 +8,14 @@ public class Persegi extends BangunDatar implements IResize{
     /*************ATRIBUT********************/
     private double sisi;
 
-    /*************KONSTRUKTOR********************/
-    //Tanpa parameter
+    /***************METHOD********************/
+    /*============KONSTRUKTOR============*/
+    //Konstruktor tanpa parameter
     public Persegi(){
         setJmlSisi(4);
     }
 
-    //Dengan Parameter
+    //Konstruktor dengan Parameter
     public Persegi(double sisi, String warna, String border){
         this.sisi = sisi;
         setWarna(warna);
@@ -22,19 +23,19 @@ public class Persegi extends BangunDatar implements IResize{
         setJmlSisi(4);
     }
 
-
-    /*************SELEKTOR********************/
+    /*============SELEKTOR============*/
+    //Mengembalikan nilai atribut sisi
     public double getSisi(){
         return sisi;
     }
 
-
-    /*************MUTATOR********************/
+    /*============MUTATOR============*/
+    //Mengubah nilai sisi
     public void setSisi(double sisi){
         this.sisi = sisi;
     }
 
-    /*************METHOD********************/
+    /*============Method Lainnya============*/
     //Menghitung luas persegi
     public double getLuas(){
         return sisi * sisi;
