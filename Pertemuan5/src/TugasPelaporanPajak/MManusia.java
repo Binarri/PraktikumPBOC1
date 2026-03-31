@@ -25,9 +25,9 @@ public class MManusia {
 
         //Menampilkan pajak dari masing-masing objek
         System.out.println();
-        System.out.println("Pajak PNS p1 = " + p1.hitungPajak());
-        System.out.println("Pajak Pengusaha pe1 = " + pe1.hitungPajak());
-        System.out.println("Pajak Petani pt1 = " + pt1.hitungPajak());
+        System.out.println("Pajak PNS p1 = Rp" + p1.hitungPajak());
+        System.out.println("Pajak Pengusaha pe1 = Rp" + pe1.hitungPajak());
+        System.out.println("Pajak Petani pt1 = Rp" + pt1.hitungPajak());
         
         //Menampilkan masa kerja dari masing-masing objek
         System.out.println();
