@@ -24,6 +24,7 @@ public class Titik {
         counterTitik++;
     }
 
+    //Konstruktor tanpa parameter
     public Titik(){
         this(0,0);
     }
@@ -64,10 +65,12 @@ public class Titik {
         System.out.println("Titik (" + absis + "," + ordinat + ")");
     }
 
+    //mencetak jumlah objek titik yang telah dibuat
     // void printCounterTitik(){
     //     System.out.println(this.counterTitik);
     // }
 
+    //mengembalikan kuadran titik
     public int getKuadran(){
         if (absis > 0 && ordinat >0){
             return 1;
@@ -82,22 +85,27 @@ public class Titik {
         }
     }
     
+    //mengembalikan jarak titik ke pusat koordinat
     public double getJarakPusat(){
         return Math.sqrt((absis*absis)+(ordinat*ordinat));
     }
 
+    //mengembalikan jarak titik ke titik T
     public double getJarak(Titik T){
         return Math.sqrt(((absis- T.getAbsis())*(absis- T.getAbsis()))+((ordinat-T.getOrdinat())*(ordinat-T.getOrdinat())));
     }
 
+    //mengembalikan titik hasil refleksi terhadap sumbu x
     public void refleksiX(){
         ordinat = -ordinat;
     }
 
+    //mengembalikan titik hasil refleksi terhadap sumbu y
     public void refleksiY(){
         absis = -absis;
     }
 
+    //mengembalikan titik hasil refleksi terhadap sumbu x tanpa mengubah titik asal
     public Titik getRefleksiX(){
         Titik T2 = new Titik();
         T2.setAbsis(absis);
@@ -105,6 +113,7 @@ public class Titik {
         return T2;
     }
 
+    //mengembalikan titik hasil refleksi terhadap sumbu y tanpa mengubah titik asal
     public Titik getRefleksiY(){
         Titik T2 = new Titik();
         T2.setAbsis(absis * -1);
