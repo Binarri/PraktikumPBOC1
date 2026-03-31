@@ -12,13 +12,14 @@ public class BangunDatar { /*Jika ditambahkan keyword final pada class BangunDat
     private static int counterBangunDatar = 0;
 
     
-    /*************KONSTRUKTOR********************/
-    //Tanpa parameter
+    /***************METHOD********************/
+    /*============KONSTRUKTOR============*/
+    //Konstruktor tanpa parameter
     public BangunDatar(){
         counterBangunDatar++;
     }
 
-    //Dengan Parameter
+    //Konstruktor dengan Parameter
     public BangunDatar(int jmlSisi, String warna, String border){
         this.jmlSisi = jmlSisi;
         this.warna = warna;
@@ -26,9 +27,7 @@ public class BangunDatar { /*Jika ditambahkan keyword final pada class BangunDat
         counterBangunDatar++;
     }
 
-
-
-    /*************SELEKTOR********************/
+    /*============SELEKTOR============*/
     //Mengembalikan nilai jmlSisi
     public int getJmlSisi(){
         return jmlSisi;
@@ -44,20 +43,23 @@ public class BangunDatar { /*Jika ditambahkan keyword final pada class BangunDat
         return border;
     }
 
-    /*************MUTATOR********************/
+    /*============MUTATOR============*/
+    //Mengubah nilai jmlSisi
     public void setJmlSisi(int jmlSisi){
         this.jmlSisi = jmlSisi;
     }
 
+    //Mengubah nilai warna
     public void setWarna(String warna){
         this.warna = warna;
     }
 
+    //Mengubah nilai border
     public void setBorder(String border){
         this.border = border;
     }
 
-    /*************METHOD********************/
+    /*============Method Lainnya============*/
     //Menampilkan jumlah objek BangunDatar
     public static void printCounterBangunDatar(){
         System.out.println("Jumlah Objek Bangun Datar: " + counterBangunDatar);
@@ -69,4 +71,4 @@ public class BangunDatar { /*Jika ditambahkan keyword final pada class BangunDat
         System.out.println("Warna: " + warna);
         System.out.println("Border: " + border);
     }
-}
+} //end of class BangunDatar

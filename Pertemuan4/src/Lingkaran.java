@@ -8,13 +8,14 @@ public class Lingkaran extends BangunDatar {
     /*************ATRIBUT********************/
     private double jari;
 
-    /*************KONSTRUKTOR********************/
-    //Tanpa parameter
+    /***************METHOD********************/
+    /*============KONSTRUKTOR============*/
+    //Konstruktor tanpa parameter
     public Lingkaran(){
         setJmlSisi(1);
     }
 
-    //Dengan parameter
+    //Konstruktor dengan parameter
     public Lingkaran(double jari, String warna, String border){
         // this.jari = jari;
         // setWarna(warna);
@@ -25,20 +26,21 @@ public class Lingkaran extends BangunDatar {
         this.jari = jari;
     }
 
-
-    /*************SELEKTOR********************/
+    /*============SELEKTOR============*/
+    //Mengembalikan nilai jari-jari
     public double getJari(){
         return jari;
     }
 
 
-    ///*************MUTATOR********************/
+    /*============MUTATOR============*/
+    //Mengubah nilai jari-jari
     public void setJari(double jari){
         this.jari = jari;
     }
 
 
-    /*************METHOD********************/
+    /*============Method Lainnya============*/
     //Menghitung Luas Lingkaran
     public double getLuas(){
         return Math.PI * jari * jari;
@@ -55,5 +57,4 @@ public class Lingkaran extends BangunDatar {
         super.printInfo();
         System.out.println("Jari-Jari: " + jari);
     }
-
-}
+} //end of class Lingkaran

@@ -14,8 +14,9 @@ public class Pegawai {
     protected double gaji_pokok;
     private static int counterPegawai = 0;
 
-    /*************KONSTRUKTOR********************/
-    //Tanpa Parameter
+    /***************METHOD********************/
+    /*============KONSTRUKTOR============*/
+    //Konstruktor tanpa parameter
     public Pegawai(){
         this.NIP = " ";
         this.nama = " ";
@@ -25,7 +26,7 @@ public class Pegawai {
         counterPegawai++;
     }
 
-    //Dengan Parameter
+    //Konstruktor dengan Parameter
     public Pegawai(String NIP, String nama, Tanggal tglLahir, Tanggal TMT, double gaji_pokok){
         this.NIP = NIP;
         this.nama = nama;
@@ -35,49 +36,64 @@ public class Pegawai {
         counterPegawai++;
     }
 
-    /*************SELEKTOR********************/
+    /*============SELEKTOR============*/
+    //Mengembalikan nilai NIP
     public String getNIP(){
         return NIP;
     }
 
+    //Mengembalikan nilai nama
     public String getNama(){
         return nama;
     }
 
+    //Mengembalikan nilai tanggal lahir
     public Tanggal getTglLahir(){
         return tglLahir;
     }
 
+    //Mengembalikan nilai TMT
     public Tanggal getTMT(){
         return TMT;
     }
 
+    //Mengembalikan nilai gaji pokok
     public double getGajiPokok(){
         return gaji_pokok;
     }
 
-    /*************MUTATOR********************/
+    //Mengembalikan nilai counterPegawai
+    public static int getCounterPegawai() {
+        return counterPegawai;
+    }
+
+    /*============MUTATOR============*/
+    //Mengubah nilai NIP
     public void setNIP(String NIP){
         this.NIP = NIP;
     }
 
+    //Mengubah nilai nama
     public void setNama(String nama){
         this.nama = nama;
     }
 
+    //Mengubah nilai tanggal lahir
     public void setTglLahir(Tanggal tglLahir){
         this.tglLahir = tglLahir;
     }
 
+    //Mengubah nilai TMT
     public void setTMT(Tanggal TMT){
         this.TMT = TMT;
     }
 
+    //Mengubah nilai gaji pokok
     public void setGajiPokok(double gaji_pokok){
         this.gaji_pokok = gaji_pokok;
     }
 
-    /*************METHOD********************/
+    /*============Method Lainnya============*/
     //Menghitung masa kerja dalam tahun..bulan..
     public String getMasaKerja(){
         int nowTahun = 2025;
@@ -103,6 +119,6 @@ public class Pegawai {
         System.out.println("Nama: " + nama);
         System.out.println("Tanggal Lahir: " + tglLahir.print());
         System.out.println("TMT: " + TMT.print());
-        System.out.println("Gaji Pokok: Rp " + String.format("%,.0f", gaji_pokok));
+        System.out.println("Gaji Pokok: Rp " + String.format("%,.2f", gaji_pokok));
     }
-}
+} //end of class Pegawai
