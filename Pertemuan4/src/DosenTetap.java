@@ -9,32 +9,35 @@ public class DosenTetap extends Dosen{
     private String NIDN;
     private static int BUP = 65;
 
-    /*************KONSTRUKTOR********************/
-    //Tanpa Parameter
+    /***************METHOD********************/
+    /*============KONSTRUKTOR============*/
+    //Konstruktor tanpa parameter
     public DosenTetap(){
         super();
         this.NIDN = " ";
     }
 
-    //Dengan Parameter
+    //Konstruktor dengan Parameter
     public DosenTetap(String NIP, String NIDN, String nama, Tanggal tglLahir, Tanggal TMT, double gaji_pokok, String fakultas){
         super(NIP, nama, tglLahir, TMT, gaji_pokok, fakultas);
         this.NIDN = NIDN;
     }
 
-    /*************SELEKTOR********************/ 
+    /*============SELEKTOR============*/
+    //Mengembalikan nilai NIDN
     public String getNIDN(){
         return NIDN;
     }
 
 
-    /*************MUTATOR********************/
+    /*============MUTATOR============*/
+    //Mengubah nilai NIDN
     public void setNIDN(String NIDN){
         this.NIDN = NIDN;
     }
 
 
-    /*************METHOD********************/
+    /*============Method Lainnya============*/
     //Menghitung tanggal pensiun
     public Tanggal TglPensiun() {
         int thnPensiun = tglLahir.getTahun() + BUP;
@@ -62,7 +65,7 @@ public class DosenTetap extends Dosen{
         System.out.println("Fakultas: " + fakultas);
         System.out.println("Masa Kerja: " + getMasaKerja());
         System.out.println("Tanggal Pensiun: " + TglPensiun().print());
-        System.out.println("Gaji Pokok: Rp " + String.format("%,.0f", gaji_pokok));
-        System.out.println("Tunjangan: 2% x " + getMasaKerjaTahun() + " x Rp " + String.format("%,.0f", gaji_pokok) + " = Rp " + String.format("%,.0f", tunjangan));
+        System.out.println("Gaji Pokok: Rp " + String.format("%,.2f", gaji_pokok));
+        System.out.println("Tunjangan: 2% x " + getMasaKerjaTahun() + " x Rp " + String.format("%,.2f", gaji_pokok) + " = Rp " + String.format("%,.2f", tunjangan));
     }
-}
+} //end of class DosenTetap

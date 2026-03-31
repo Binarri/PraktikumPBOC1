@@ -8,35 +8,37 @@ public class Dosen extends Pegawai{
     /*************ATRIBUT********************/
     protected String fakultas;
 
-    /*************KONSTRUKTOR********************/
-    //Tanpa Parameter
+    /***************METHOD********************/
+    /*============KONSTRUKTOR============*/
+    //Konstruktor tanpa parameter
     public Dosen(){
         super();
         this.fakultas = " ";
     }
 
-    //Dengan Parameter
+    //Konstruktor dengan Parameter
     public Dosen(String NIP, String nama, Tanggal tglLahir, Tanggal TMT, double gaji_pokok, String fakultas){
         super(NIP, nama, tglLahir, TMT, gaji_pokok);
         this.fakultas = fakultas;
     }
 
-    /*************SELEKTOR********************/
+    /*============SELEKTOR============*/
+    //Mengembalikan nilai fakultas
     public String getFakultas(){
         return fakultas;
     }
 
-
-    /*************MUTATOR********************/
+    /*============MUTATOR============*/
+    //Mengubah nilai fakultas
     public void setFakultas(String fakultas){
         this.fakultas = fakultas;
     }
 
-    /*************METHOD********************/
+    /*============Method Lainnya============*/
     //Menampilkan info Dosen
     @Override
     public void printInfo(){
         super.printInfo();
         System.out.println("Fakultas: " + fakultas);
     }
-}
+} //end of class Dosen

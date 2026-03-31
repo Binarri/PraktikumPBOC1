@@ -9,40 +9,45 @@ public class DosenTamu extends Dosen{
     private String NIDK;
     private Tanggal lastMasaKontrak;
 
-    /*************KONSTRUKTOR********************/
-    //Tanpa Parameter
+    /***************METHOD********************/
+    /*============KONSTRUKTOR============*/
+    //Konstruktor tanpa parameter
     public DosenTamu(){
         super();
         this.NIDK = " ";
         this.lastMasaKontrak = new Tanggal();
     }
 
-    //Dengan Parameter
+    //Konstruktor dengan Parameter
     public DosenTamu(String NIP, String NIDK, String nama, Tanggal tglLahir, Tanggal TMT, double gaji_pokok, String fakultas, Tanggal Akhirkontrak){
         super(NIP, nama, tglLahir, TMT, gaji_pokok, fakultas);
         this.NIDK = NIDK;
         this.lastMasaKontrak = Akhirkontrak;
     }
 
-    /*************SELEKTOR********************/
+    /*============SELEKTOR============*/
+    //Mengembalikan nilai NIDK
     public String getNIDK(){
         return NIDK;
     }
 
+    //Mengembalikan nilai akhir masa kontrak
     public Tanggal getAkhirKontrak(){ 
         return lastMasaKontrak; 
     }
 
-    /*************MUTATOR********************/
+    /*============MUTATOR============*/
+    //Mengubah nilai NIDK
     public void setNIDK(String NIDK){
         this.NIDK = NIDK;
     }
 
+    //Mengubah nilai akhir masa kontrak
     public void setAkhirKontrak(Tanggal lastMasaKontrak){
         this.lastMasaKontrak = lastMasaKontrak;
     }
 
-    /*************METHOD********************/
+    /*============Method Lainnya============*/
     //Menghitung sisa kontrak dalam bulan
     public int getSisaKontrakBulan(){
         int nowTahun = 2025;
@@ -66,7 +71,7 @@ public class DosenTamu extends Dosen{
         System.out.println("Fakultas: " + fakultas);
         System.out.println("Akhir Masa Kontrak: " + lastMasaKontrak.print());
         System.out.println("Sisa Kontrak : " + getSisaKontrakBulan() + " bulan");
-        System.out.println("Gaji Pokok : Rp " + String.format("%,.0f", gaji_pokok));
-        System.out.println("Tunjangan: 2.5% x Rp " + String.format("%,.0f", gaji_pokok) + " = Rp " + String.format("%,.0f", tunjangan));
+        System.out.println("Gaji Pokok : Rp " + String.format("%,.2f", gaji_pokok));
+        System.out.println("Tunjangan: 2.5% x Rp " + String.format("%,.2f", gaji_pokok) + " = Rp " + String.format("%,.2f", tunjangan));
     }
-}
+} //end of class DosenTamu

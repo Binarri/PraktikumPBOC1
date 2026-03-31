@@ -9,13 +9,15 @@ public class Tanggal {
     private int hari, bulan, tahun;
     private static int counterTanggal=0;
 
-    /*************KONSTRUKTOR********************/
-    //Tanpa Parameter 
+
+    /***************METHOD********************/
+    /*============KONSTRUKTOR============*/
+    //Konstruktor tanpa parameter
     public Tanggal(){
         counterTanggal++;
     }
 
-    //Dengan Parameter
+    //Konstruktor dengan Parameter
     public Tanggal(int hari, int bulan, int tahun) {
         this.hari = hari;
         this.bulan = bulan;
@@ -23,33 +25,44 @@ public class Tanggal {
         counterTanggal++;
     }
 
-    /*************SELEKTOR********************/
+    /*============SELEKTOR============*/
+    //Mengembalikan nilai hari
     public int getHari(){ 
         return hari; 
     }
 
+    //Mengembalikan nilai bulan
     public int getBulan(){ 
         return bulan; 
-    
     }
+
+    //Mengembalikan nilai tahun
     public int getTahun(){ 
         return tahun; 
     }
 
-    /*************MUTATOR********************/
+    //Mengembalikan nilai counterTanggal
+    public static int getCounterTanggal() {
+        return counterTanggal;
+    }
+
+    /*============MUTATOR============*/
+    //Mengubah nilai hari
     public void setHari(int hari){ 
         this.hari = hari; 
     }
 
+    //Mengubah nilai bulan
     public void setBulan(int bulan){ 
         this.bulan = bulan; 
     }
 
+    //Mengubah nilai tahun
     public void setTahun(int tahun){ 
         this.tahun = tahun; 
     }
 
-    /*************METHOD********************/
+    /*============Method Lainnya============*/
     //Mengubah bulan dari integer jadi string
     public String getNamaBulan() {
         String[] bulanString = {"Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"};
@@ -60,4 +73,4 @@ public class Tanggal {
     public String print() {
         return hari + " " + getNamaBulan() + " " + tahun;
     }
-}
+} //end of class Tanggal

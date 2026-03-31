@@ -9,32 +9,33 @@ public class Tendik extends Pegawai{
     private String Bidang;
     private static int BUP = 55;
 
-    /*************KONSTRUKTOR********************/
-    //Tanpa parameter
+    /***************METHOD********************/
+    /*============KONSTRUKTOR============*/
+    //Konstruktor tanpa parameter
     public Tendik(){
         super();
         this.Bidang = " ";
     }
 
-    //Dengan Parameter
+    //Konstruktor dengan Parameter
     public Tendik(String NIP, String nama, Tanggal tglLahir, Tanggal TMT, double gaji_pokok, String Bidang){
         super(NIP, nama, tglLahir, TMT, gaji_pokok);
         this.Bidang = Bidang;
     }
 
-    /*************SELEKTOR********************/ 
+    /*============SELEKTOR============*/
+    //Mengembalikan nilai bidang
     public String getBidang(){
         return Bidang;
     }
 
-
-    /*************MUTATOR********************/
+    /*============MUTATOR============*/
+    //Mengubah nilai bidang
     public void setBidang(String Bidang){
         this.Bidang = Bidang;
     }
 
-
-    /*************METHOD********************/
+    /*============Method Lainnya============*/
     //Menghitung tanggal pensiun
     public Tanggal hitungTglPensiun() {
         int thnPensiun = tglLahir.getTahun() + BUP;
@@ -59,6 +60,6 @@ public class Tendik extends Pegawai{
         System.out.println("Bidang: " + Bidang);
         System.out.println("Masa Kerja: " + getMasaKerja());
         System.out.println("Tanggal Pensiun: " + hitungTglPensiun().print());
-        System.out.println("Tunjangan: 1% x " + getMasaKerjaTahun() + " x Rp " + String.format("%,.0f", gaji_pokok) + " = Rp " + String.format("%,.0f", tunjangan));
+        System.out.println("Tunjangan: 1% x " + getMasaKerjaTahun() + " x Rp " + String.format("%,.2f", gaji_pokok) + " = Rp " + String.format("%,.2f", tunjangan));
     }
-}
+} //end of class Tendik
