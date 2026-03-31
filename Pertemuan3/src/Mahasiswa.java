@@ -14,10 +14,11 @@ public class Mahasiswa {
     private ArrayList<MataKuliah> listMatkul;
     private Dosen dosenWali;
     private Kendaraan kendaraan;
-    private static int countMahasiswa;
+    private static int countMahasiswa=0;
 
-    /***************KONSTRUKTOR******************/
-    //Tanpa Parameter
+    /***************METHOD********************/
+    /*============KONSTRUKTOR============*/
+    //Konstruktor tanpa parameter
     public Mahasiswa(){
         this.nim = " ";
         this.nama = " ";
@@ -28,7 +29,7 @@ public class Mahasiswa {
         countMahasiswa++;
     }
 
-    //Dengan Parameter
+    //Konstruktor dengan Parameter
     public Mahasiswa(String nim, String nama, String prodi){
         this.nim = nim;
         this.nama = nama;
@@ -36,71 +37,84 @@ public class Mahasiswa {
         this.listMatkul = new ArrayList<>();
         this.dosenWali = new Dosen();
         this.kendaraan = new Kendaraan();
+        countMahasiswa++;
     }
 
-    /***************SELEKTOR******************/
+    /*============SELEKTOR============*/
+    //Mengembalikan nilai atribut NIM
     public String getNIM(){
         return nim;
     }
 
+    //Mengembalikan nilai atribut Nama
     public String getNama(){
         return nama;
     }
 
+    //Mengembalikan nilai atribut Prodi
     public String getProdi(){
         return prodi;
     }
 
+    //Mengembalikan nilai atribut listMatkul
     public ArrayList<MataKuliah> getListMatkul(){
         return listMatkul;
     }
 
+    //Mengembalikan nilai atribut dosenWali
     public Dosen getDosenWali(){
         return dosenWali;
     }
 
+    //Mengembalikan nilai atribut kendaraan
     public Kendaraan getKendaraan(){
         return kendaraan;
     }
 
+    //Mengembalikan nilai countMahasiswa
     public static int getCountMahasiswa(){
         return countMahasiswa;
     }
 
-
-    /***************MUTATOR******************/
+    /*============MUTATOR============*/
+    //Mengubah nilai NIM
     public void setNIM(String nim){
         this.nim = nim;
     }
 
+    //Mengubah nilai atribut Nama
     public void setNama(String nama){
         this.nama = nama;
     }
 
+    //Mengubah nilai atribut Prodi
     public void setProdi(String prodi){
         this.prodi = prodi;
     }
 
+    //Mengubah nilai atribut listMatkul
     public void setListMatkul(ArrayList<MataKuliah> listMatkul){
         this.listMatkul = listMatkul;
     }
 
+    //Mengubah nilai atribut dosenWali
     public void setDosenWali(Dosen dosenWali){
         this.dosenWali = dosenWali;
     }
 
+    //Mengubah nilai atribut kendaraan
     public void setKendaraan(Kendaraan kendaraan){
         this.kendaraan = kendaraan;
     }
 
 
-    /***************METHOD******************/
+    /*============Method Lainnya============*/
     //Menambahkan sebuah mata kuliah ke atribut listMatkul
     public void addMatkul(MataKuliah newMatKul){
         listMatkul.add(newMatKul);
     }
 
-    //mendapatkan jumlah SKS mata kuliah yang diambil mahasiswa
+    //Mendapatkan jumlah SKS mata kuliah yang diambil mahasiswa
     public int getJumlahSKS(){
         int jumlahSKS=0;
         for(int i=0; i<listMatkul.size(); i++){
@@ -118,7 +132,7 @@ public class Mahasiswa {
     public void printMhs(){
         System.out.println("NIM: " + nim);
         System.out.println("Nama: " + nama);
-        System.out.println("Prodi" + prodi);
+        System.out.println("Prodi: " + prodi);
     }
 
     //Menampilkan nim, nama, prodi, daftar mata kuliah yang diambil, data dosen wali, data kendaraan yang dimiliki mahasiswa
@@ -138,5 +152,5 @@ public class Mahasiswa {
         System.out.println("Kendaraan: " + kendaraan.getNoPlat());
         System.out.println("Jenis Kendaraan: " + kendaraan.getJenis());
     }
-}
+} //end of class Mahasiswa
 

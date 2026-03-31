@@ -9,10 +9,11 @@ public class Dosen {
     private String nip;
     private String nama;
     private String prodi;
-    private static int countDosen;
+    private static int countDosen=0;
 
-    /***************KONSTRUKTOR******************/
-    //Tanpa Parameter
+    /***************METHOD********************/
+    /*============KONSTRUKTOR============*/
+    //Konstruktor tanpa parameter
     public Dosen(){
         this.nip = " ";
         this.nama = " ";
@@ -20,49 +21,56 @@ public class Dosen {
         countDosen++;
     }
 
-    //Dengan Parameter
+    //Konstruktor dengan Parameter
     public Dosen(String nip, String nama, String prodi){
         this.nip = nip;
         this.nama = nama;
         this.prodi = prodi;
+        countDosen++;
     }
 
-    /***************SELEKTOR******************/
+    /*============SELEKTOR============*/
+    //Mengembalikan nilai atribut NIP
     public String getNip(){
         return nip;
     }
 
+    //Mengembalikan nilai atribut Nama
     public String getNama(){
         return nama;
     }
 
+    //Mengembalikan nilai atribut Prodi
     public String getProdi(){
         return prodi;
     }
 
+    //Mengembalikan nilai countDosen
     public static int getCountDosen(){
         return countDosen;
     }
 
-    /***************MUTATOR******************/
+    /*============MUTATOR============*/
+    //Mengubah nilai NIP
     public void setNip(String nip){
         this.nip = nip;
     }
 
+    //Mengubah nilai atribut Nama
     public void setNama(String nama){
         this.nama = nama;
     }
 
+    //Mengubah nilai atribut Prodi
     public void setProdi(String prodi){
         this.prodi = prodi;
     }
 
-
+    /*============Method Lainnya============*/
     //Menampilkan data dosen
     public void printDosen(){
         System.out.println("NIP: " + nip);
         System.out.println("Nama: " + nama);
         System.out.println("Prodi: " + prodi);
     }
-
-}
+} //end of class Dosen
