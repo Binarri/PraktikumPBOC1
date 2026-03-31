@@ -75,4 +75,4 @@ public class Persegi extends BangunDatar implements IResize{
     public void zoom(int percent){
         sisi = sisi * (1 + percent/100);
     }
-}
+}//end class Persegi
