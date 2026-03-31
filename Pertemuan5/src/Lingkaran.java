@@ -1,20 +1,21 @@
 /* Nama File    : Lingkaran.java
- Deskripsi      : berisi atribut dan method dalam class Lingkaran
- Pembuat        : Binar Ridha Wiritanaya
- Tanggal        : 26 Maret 2026 
- */
+Deskripsi      : berisi atribut dan method dalam class Lingkaran
+Pembuat        : Binar Ridha Wiritanaya
+Tanggal        : 26 Maret 2026 
+*/
 
 public class Lingkaran extends BangunDatar implements IResize{
     /*************ATRIBUT********************/
     private double jari;
-
-    /*************KONSTRUKTOR********************/
-    //Tanpa parameter
+    
+    /***************METHOD********************/
+    /*============KONSTRUKTOR============*/
+    //Konstruktor tanpa parameter
     public Lingkaran(){
         setJmlSisi(1);
     }
 
-    //Dengan parameter
+    //Konstruktor dengan parameter
     public Lingkaran(double jari, String warna, String border){
         this.jari = jari;
         setWarna(warna);
@@ -22,20 +23,19 @@ public class Lingkaran extends BangunDatar implements IResize{
         setJmlSisi(1);
     }
 
-
-    /*************SELEKTOR********************/
+    /*============SELEKTOR============*/
+    //Mengembalikan nilai atribut jari
     public double getJari(){
         return jari;
     }
 
-
-    ///*************MUTATOR********************/
+    /*============MUTATOR============*/
+    //Mengubah nilai jari
     public void setJari(double jari){
         this.jari = jari;
     }
 
-
-    /*************METHOD********************/
+    /*============Method Lainnya============*/
     //Menghitung Luas Lingkaran
     public double getLuas(){
         return Math.PI * jari * jari;
@@ -70,5 +70,4 @@ public class Lingkaran extends BangunDatar implements IResize{
     public void zoom(int percent){
         jari = jari * (1 + percent/100);
     }
-
-}
+}//end class Lingkaran

@@ -15,13 +15,14 @@ public abstract class BangunDatar {
     private static int counterBangunDatar = 0;
 
     
-    /*************KONSTRUKTOR********************/
-    //Tanpa parameter
+    /***************METHOD********************/
+    /*============KONSTRUKTOR============*/
+    //Konstruktor tanpa parameter
     public BangunDatar(){
         counterBangunDatar++;
     }
 
-    //Dengan Parameter
+    //Konstruktor dengan Parameter
     public BangunDatar(int jmlSisi, String warna, String border){
         this.jmlSisi = jmlSisi;
         this.warna = warna;
@@ -29,9 +30,7 @@ public abstract class BangunDatar {
         counterBangunDatar++;
     }
 
-
-
-    /*************SELEKTOR********************/
+    /*============SELEKTOR============*/
     //Mengembalikan nilai jmlSisi
     public int getJmlSisi(){
         return jmlSisi;
@@ -47,21 +46,27 @@ public abstract class BangunDatar {
         return border;
     }
 
-    /*************MUTATOR********************/
+    /*============MUTATOR============*/
+    //Mengubah nilai jmlSisi
     public void setJmlSisi(int jmlSisi){
         this.jmlSisi = jmlSisi;
     }
 
+    //Mengubah nilai warna
     public void setWarna(String warna){
         this.warna = warna;
     }
 
+    //Mengubah nilai border
     public void setBorder(String border){
         this.border = border;
     }
 
-    /*************METHOD********************/
+    /*============Method Lainnya============*/
+    //Method abstrak untuk menghitung luas bangun datar
     public abstract double getLuas();
+
+    //Method abstrak untuk menghitung keliling bangun datar
     public abstract double getKeliling();
     
     //Untuk mengecek apakah sebuah objek bangun datar memiliki luas yang sama dengan bangun datar lainnya
@@ -85,4 +90,4 @@ public abstract class BangunDatar {
         System.out.println("Warna: " + warna);
         System.out.println("Border: " + border);
     }
-}
+}//end class PNS
