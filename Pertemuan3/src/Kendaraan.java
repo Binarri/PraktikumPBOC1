@@ -8,48 +8,55 @@ public class Kendaraan {
     /*************ATRIBUT********************/
     private String noPlat;
     private String jenis;
-    private static int countKendaraan;
+    private static int countKendaraan=0;
 
-    /***************KONSTRUKTOR******************/
-    //Tanpa Parameter
+    /***************METHOD********************/
+    /*============KONSTRUKTOR============*/
+    //Konstruktor tanpa parameter
     public Kendaraan(){
         this.noPlat = " ";
         this.jenis = " ";
         countKendaraan++;
     }
 
-    //Dengan Parameter
+    //Konstruktor dengan Parameter
     public Kendaraan(String noPlat, String jenis){
         this.noPlat = noPlat;
         this.jenis = jenis;
+        countKendaraan++;
     }
 
-    /***************SELEKTOR******************/
+    /*============SELEKTOR============*/
+    //Mengembalikan nilai atribut No Plat
     public String getNoPlat(){
         return noPlat;
     }
 
+    //Mengembalikan nilai atribut Jenis
     public String getJenis(){
         return jenis;
     }
 
+    //Mengembalikan nilai countKendaraan
     public static int getCountKendaraan(){
         return countKendaraan;
     }
    
-    /***************MUTATOR******************/
+    /*============MUTATOR============*/
+    //Mengubah nilai No Plat
     public void setNoPlat(String noPlat){
         this.noPlat = noPlat;
     }
 
+    //Mengubah nilai atribut Jenis
     public void setJenis(String jenis){
         this.jenis = jenis;
     }
 
-
+    /*============Method Lainnya============*/
     //Menampilkan data kendaraan
     public void printKendaraan(){
         System.out.println("No Plat: " + noPlat);
         System.out.println("Jenis: " + jenis);
     }
-}
+} //end of class Kendaraan
