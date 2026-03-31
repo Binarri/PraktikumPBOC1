@@ -9,4 +9,4 @@ package TugasPelaporanPajak;
 public interface Pajak {
     //Menghitung pajak berdasarkan jenis pekerjaan
     public double hitungPajak();
-}
+} //end interface Pajak

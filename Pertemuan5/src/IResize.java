@@ -16,4 +16,4 @@ public interface IResize {
 
 
     //Keuntungan method zoomIn(), zoomOut(), dan zoom() dikemas dalam interface IResize yaitu lebih fleksibel karena dapat digunakan oleh berbagai class tanpa harus memiliki hubungan inheritance, serta hanya digunakan pada class yang membutuhkan saja yang mengimplementasikannya
-}
+} //end interface IResize
