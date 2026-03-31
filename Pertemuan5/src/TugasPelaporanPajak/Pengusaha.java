@@ -51,7 +51,7 @@ public class Pengusaha extends Manusia implements Pajak{
     @Override
     public int hitungMasaKerja(){
         //NIM: 24060124140143
-        int B = 4;
+        int B = 4; //digit ke 13 NIM
         Period p = Period.between(tgl_mulai_kerja, LocalDate.now());
         return p.getYears() + B;
     }
