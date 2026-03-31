@@ -51,7 +51,7 @@ public class PNS extends Manusia implements Pajak{
     @Override
     public int hitungMasaKerja(){
         //NIM: 24060124140143
-        int A = 3;
+        int A = 3; //digit ke 14 NIM
         Period p = Period.between(tgl_mulai_kerja, LocalDate.now());
         return p.getYears() + A;
     }
